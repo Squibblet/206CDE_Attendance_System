@@ -14,6 +14,7 @@ import javax.inject.Inject
 /**
  * @author vsouhrada
  * @since 0.1.0
+ * gggggggggggggggggggg
  */
 class FiboApp : Application(), AnkoLogger {
 
