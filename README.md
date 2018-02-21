@@ -1,5 +1,7 @@
 ## Kotlin & Anko for Android Development
 
+## This file needs updating!
+
 The main goal of this project is to learn and show how to use Kotlin & Anko for Android development.
  
 Because I'm a big fan of the [Requery](https://github.com/requery/requery) library so I'm using it 
