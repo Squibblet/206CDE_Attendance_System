@@ -1,0 +1,100 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+//apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'kotlin-kapt'
+//apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 24
+
+
+    defaultConfig {
+        applicationId "com.vsouhrada.kotlin.android.anko.fibo"
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    lintOptions {
+        //disable 'InvalidPackage'
+        warning 'InvalidPackage'
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile project(":lib-db")
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    annotationProcessor 'frankiesardo:icepick-processor:3.2.0'
+
+    compile "com.android.support:appcompat-v7:$supportVersion"
+    compile "com.android.support:recyclerview-v7:$supportVersion"
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+    compile "org.jetbrains.anko:anko-sdk15:$ankoVersion" // sdk19, sdk21, sdk23 are also available
+    compile "org.jetbrains.anko:anko-sqlite:$ankoVersion"
+    compile 'com.android.support:design:24.2.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
+    compile "com.google.code.gson:gson:2.4"
+
+    // Anko libs matching support libs
+    compile "org.jetbrains.anko:anko-appcompat-v7:$ankoVersion"
+    compile "org.jetbrains.anko:anko-design:$ankoVersion"
+    compile "org.jetbrains.anko:anko-recyclerview-v7:$ankoVersion"
+
+    // Mosby - MVP
+    compile 'com.hannesdorfmann.mosby:mvp:2.0.1'
+    compile 'com.hannesdorfmann.mosby:viewstate:2.0.1' // optional viewstate feature
+
+    // Reactive - Rx
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'io.reactivex:rxkotlin:0.60.0'
+
+    // Requery
+    compile "io.requery:requery:$requeryVersion"
+    compile "io.requery:requery-kotlin:$requeryVersion"
+    compile "io.requery:requery-android:$requeryVersion" // for android
+    //kapt "io.requery:requery-processor:$requeryVersion"
+
+    compile "frankiesardo:icepick:$icepickVersion"
+    provided "frankiesardo:icepick-processor:$icepickVersion"
+
+    compile 'com.rengwuxian.materialedittext:library:2.1.4'
+    compile 'com.github.jjhesk:hkm-progress-button:0.15'
+    compile 'com.github.clans:fab:1.6.4'
+
+    compile 'com.chibatching:kotpref:1.6.0'
+    compile 'nz.bradcampbell:paperparcel:2.0.0-beta2'
+    compile 'nz.bradcampbell:paperparcel-kotlin:2.0.0-beta2' // Optional
+    kapt 'nz.bradcampbell:paperparcel-compiler:2.0.0-beta2'
+
+    // Dagger
+    compile "com.google.dagger:dagger:$daggerVersion"
+    // APT dependencies
+    kapt "com.google.dagger:dagger-compiler:$daggerVersion"
+
+    provided 'org.glassfish:javax.annotation:10.0-b28' //Required by Dagger2
+    /* Tests */
+    testCompile 'junit:junit:4.12'
+
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+}
+
+//kapt {
+//    generateStubs = true
+//}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <com.github.clans.fab.FloatingActionMenu
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:fab="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        fab:menu_fab_size="normal"
+        fab:menu_icon="@drawable/fab_add"
+        >
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_bill_reminder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@android:drawable/ic_popup_reminder"
+            style="@style/FabMenuButtonsSmall"
+            fab:fab_label="@string/fab_main_bill_reminder"
+            fab:fab_size="mini"
+            />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_new_income"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@mipmap/ic_edit"
+            style="@style/FabMenuButtonsSmall.Green"
+            fab:fab_label="@string/fab_main_new_income"
+            fab:fab_size="mini"
+            />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_new_expense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@mipmap/ic_edit"
+            fab:fab_label="@string/fab_main_new_expense"
+            fab:fab_size="mini"
+            />
+
+    </com.github.clans.fab.FloatingActionMenu>

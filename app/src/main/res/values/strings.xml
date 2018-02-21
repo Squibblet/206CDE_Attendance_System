@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Fibo</string>
+
+    <string name="dialog_button_close">Close</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- Drawer Header -->
+    <string name="navigation_drawer_title">@string/app_name</string>
+    <string name="navigation_drawer_description">Personal Finance Board</string>
+
+    <!-- Create User -->
+    <string name="create_user_hint_username">Username</string>
+    <string name="create_user_hint_password">Password</string>
+    <string name="create_user_create_button_text">Create</string>
+    <string name="create_user_alert_failed_title">Creating of Account Failed!</string>
+    <string name="create_user_alert_failed_message">Invalid username or password.</string>
+
+
+    <string name="button_login_text">Sign In</string>
+    <string name="error_view_login_text">Bad Username or password</string>
+    <string name="login_label_rememberMe">Remember Me</string>
+
+    <!-- Main FAB Menu -->
+    <string name="fab_main_bill_reminder">Bill Reminder</string>
+    <string name="fab_main_new_income">New Income</string>
+    <string name="fab_main_new_expense">New Expense</string>
+</resources>
