@@ -1,0 +1,6 @@
+Open up your android studio and start a new project, then click on VCS at the top and checkout from version control, then click in Github
+and past in this https://github.com/Squibblet/206CDE_Attendance_System.git as the Repository URL (click test to make sure it's connected)
+Then clone the repository from there. 
+
+To commit changes open up VCS again and commit changes from there. Make sure you update locally first before pushing changes do this by
+clicking update project and selecting merge. 
